@@ -5,7 +5,7 @@ create table "public"."test_supabase" (
 );
 
 
-alter table "public"."test_supabase" enable row level security;
+alter table "public"."test_supabase" disable row level security;
 
 CREATE UNIQUE INDEX test_supabase_pkey ON public.test_supabase USING btree (id);
 

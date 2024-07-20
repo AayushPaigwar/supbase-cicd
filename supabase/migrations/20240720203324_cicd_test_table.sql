@@ -5,7 +5,7 @@ create table "public"."cicd_test" (
 );
 
 
-alter table "public"."cicd_test" enable row level security;
+alter table "public"."cicd_test" disable row level security;
 
 CREATE UNIQUE INDEX cicd_test_pkey ON public.cicd_test USING btree (id);
 

@@ -7,8 +7,6 @@ create table "public"."cicd_test" (
 
 alter table "public"."cicd_test" enable row level security;
 
-alter table "public"."test_supabase" disable row level security;
-
 CREATE UNIQUE INDEX cicd_test_pkey ON public.cicd_test USING btree (id);
 
 alter table "public"."cicd_test" add constraint "cicd_test_pkey" PRIMARY KEY using index "cicd_test_pkey";

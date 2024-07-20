@@ -39,9 +39,9 @@ jobs:
   dryrun:
     runs-on: ubuntu-latest
     env:
-      SUPABASE_ACCESS_TOKEN: sbp_0cd9a01c05e6a326ee828f40270ea59fbcfdf001
-      SUPABASE_DB_PASSWORD: ${{ github.base_ref == 'main' && 'todo_app123456789' || 'C8ldRVqjxoTZygkh' }}
-      SUPABASE_PROJECT_ID: ${{ github.base_ref == 'main' && 'gaamuhzfpfdvfakdfzew' || 'mhybfsfhijzzpoxsmvbl' }}
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_DB_PASSWORD: ${{ github.base_ref == 'main' && secrets.PRODUCTION_DB_PASSWORD || secrets.STAGING_DB_PASSWORD }}
+      SUPABASE_PROJECT_ID: ${{ github.base_ref == 'main' && secrets.PRODUCTION_PROJECT_ID || secrets.STAGING_PROJECT_ID }}
 
     steps:
       - uses: actions/checkout@v4
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-      TF_VAR_linked_project: ${{ github.base_ref == 'main' && mhybfsfhijzzpoxsmvbl || C8ldRVqjxoTZygkh }}
+      TF_VAR_linked_project: ${{ github.base_ref == 'main' && secrets.PRODUCTION_PROJECT_ID || secrets.STAGING_PROJECT_ID }}
       tf_actions_working_dir: supabase/remotes
     defaults:
       run:

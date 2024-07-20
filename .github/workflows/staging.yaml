@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SUPABASE_ACCESS_TOKEN: sbp_0cd9a01c05e6a326ee828f40270ea59fbcfdf001
-      SUPABASE_DB_PASSWORD: todo_app123456789
-      SUPABASE_PROJECT_ID: gaamuhzfpfdvfakdfzew
+      SUPABASE_DB_PASSWORD: C8ldRVqjxoTZygkh
+      SUPABASE_PROJECT_ID: mhybfsfhijzzpoxsmvbl
 
     steps:
       - uses: actions/checkout@v4

@@ -10,9 +10,9 @@ jobs:
   migrate:
     runs-on: ubuntu-latest
     env:
-      SUPABASE_ACCESS_TOKEN: sbp_0cd9a01c05e6a326ee828f40270ea59fbcfdf001
-      SUPABASE_DB_PASSWORD: C8ldRVqjxoTZygkh
-      SUPABASE_PROJECT_ID: mhybfsfhijzzpoxsmvbl
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_DB_PASSWORD: ${{ secrets.STAGING_DB_PASSWORD }}
+      SUPABASE_PROJECT_ID: ${{ secrets.STAGING_PROJECT_ID }}
 
     steps:
       - uses: actions/checkout@v4

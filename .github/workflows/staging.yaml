@@ -3,7 +3,7 @@ name: Release (Staging)
 on:
   push:
     branches:
-      - develop
+      - master #develop
   workflow_dispatch:
 
 jobs:

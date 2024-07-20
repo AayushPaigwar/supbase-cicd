@@ -40,8 +40,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SUPABASE_ACCESS_TOKEN: sbp_0cd9a01c05e6a326ee828f40270ea59fbcfdf001
-      SUPABASE_DB_PASSWORD: ${{ github.base_ref == 'main' && todo_app123456789 || C8ldRVqjxoTZygkh }}
-      SUPABASE_PROJECT_ID: ${{ github.base_ref == 'main' && gaamuhzfpfdvfakdfzew || mhybfsfhijzzpoxsmvbl }}
+      SUPABASE_DB_PASSWORD: ${{ github.base_ref == 'main' && 'todo_app123456789' || 'C8ldRVqjxoTZygkh' }}
+      SUPABASE_PROJECT_ID: ${{ github.base_ref == 'main' && 'gaamuhzfpfdvfakdfzew' || 'mhybfsfhijzzpoxsmvbl' }}
 
     steps:
       - uses: actions/checkout@v4

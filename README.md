@@ -1,4 +1,4 @@
-# Supabase CLI Setup and Usage Guide
+# Supabase CLI Setup and Usage Guide 
 
 ## 🟩 Installing the Supabase CLI 🟩
 
